@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guía de Compatibilidad de Placas Base</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   <style>
@@ -11,6 +12,7 @@
       color: #ffffff;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
     }
 
     header {
@@ -18,10 +20,19 @@
       padding: 20px;
     }
 
-    marquee {
+    .marquee {
       font-size: 28px;
       color: #00f0ff;
       margin-bottom: 15px;
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing: border-box;
+      animation: scroll-left 10s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
 
     p.descripcion {
@@ -134,7 +145,8 @@
       max-width: 600px;
       border-radius: 10px;
     }
- .volver {
+
+    .volver {
       text-align: center;
       margin: 40px 0;
     }
@@ -148,32 +160,28 @@
     .volver a:hover {
       color: #00ffee;
     }
-
   </style>
 </head>
 <body>
   <header>
     <h1>Guía de Compatibilidad de Placas Base</h1>
-    <marquee behavior="alternate" scrollamount="10">¡Todo lo que necesitas saber sobre placas base y compatibilidad!</marquee>
+    <div class="marquee">¡Todo lo que necesitas saber sobre placas base y compatibilidad!</div>
   </header>
 
-  
   <div class="video-container">
     <video controls>
-      <source src="E:\Videos\menu\mobos.mp4" type="video/mp4">
+      <source src="assets/videos/mobos.mp4" type="video/mp4">
       Tu navegador no soporta este formato de video.
     </video>
   </div>
 
   <p class="descripcion">En esta guía, exploraremos todos los aspectos fundamentales de la compatibilidad de placas base, desde los tipos de sockets, la compatibilidad con procesadores, hasta los aspectos clave para elegir la placa adecuada para tu sistema.</p>
 
-  
   <div class="content-section">
     <h2 class="section-title">Introducción a las Placas Base</h2>
     <p>La placa base o motherboard es uno de los componentes más importantes de cualquier ordenador. Determina qué tipo de procesador, memoria RAM y otros componentes pueden ser utilizados. Conocer su compatibilidad es crucial para asegurar que tu PC funcione correctamente.</p>
   </div>
 
-  
   <div class="content-section">
     <h2 class="section-title">Tipos de Sockets</h2>
     <p>Existen diferentes tipos de sockets en el mercado, y es importante elegir una placa base que sea compatible con el procesador que deseas utilizar. A continuación se muestran los sockets más comunes:</p>
@@ -199,13 +207,11 @@
         <td>MSI, ASUS, Gigabyte</td>
       </tr>
     </table>
-    <!-- Imagen debajo de la tabla de Sockets -->
     <div class="image-container">
-      <img src="E:\Xpz\imagenes\SOCKET.png" alt="Tipos de Socket">
+      <img src="assets/images/SOCKET.png" alt="Imagen de distintos tipos de sockets de placas base">
     </div>
   </div>
 
-  
   <div class="content-section">
     <h2 class="section-title">Compatibilidad con Memoria RAM</h2>
     <p>La RAM también tiene un impacto importante en la elección de la placa base. Asegúrate de que tu placa base sea compatible con el tipo de RAM que deseas usar (DDR4 o DDR5). A continuación se muestra una tabla con los tipos de RAM compatibles:</p>
@@ -226,39 +232,33 @@
         <td>Placas base de gama alta y última generación</td>
       </tr>
     </table>
-    <!-- Imagen debajo de la tabla de RAM -->
     <div class="image-container">
-      <img src="E:\Xpz\imagenes\Captura de pantalla 2025-04-28 203402.png" alt="Compatibilidad con RAM">
+      <img src="assets/images/CapturaRAM.png" alt="Tabla de compatibilidad con memoria RAM">
     </div>
   </div>
 
-  
   <div class="content-section">
     <h2 class="section-title">Compatibilidad con Tarjetas Gráficas</h2>
     <p>La compatibilidad de la placa base con tarjetas gráficas es también un factor esencial. Asegúrate de que la placa tenga suficiente espacio para instalar una tarjeta gráfica grande y que sea compatible con el estándar PCIe más reciente (PCIe 3.0 o PCIe 4.0).</p>
     <ul>
       <li>
         <a href="#">Compatibilidad con PCIe 4.0</a>
-        <img src="E:\Xpz\imagenes\PCI4.0.jpeg" alt="PCIe 4.0">
+        <img src="assets/images/PCI4.0.jpeg" alt="Puerto PCIe 4.0 en una placa base">
       </li>
       <li>
         <a href="#">Espacio para tarjetas gráficas grandes</a>
-        <img src="E:\Xpz\imagenes\ESPACIOGPUSSS.jpeg" alt="Espacio para tarjetas gráficas">
+        <img src="assets/images/ESPACIOGPUSSS.jpeg" alt="Tamaño de tarjetas gráficas y su espacio en la placa">
       </li>
     </ul>
   </div>
-
 
   <div class="content-section">
     <h2 class="section-title">Conclusión</h2>
     <p>Seleccionar la placa base adecuada es esencial para garantizar la estabilidad y el rendimiento de tu sistema. Asegúrate de revisar las especificaciones del procesador, la RAM, y las tarjetas gráficas que planeas usar para evitar problemas de compatibilidad. ¡Feliz ensamblaje!</p>
   </div>
 
-<div class="volver">
+  <div class="volver">
     <a href="index.html">← Volver al Menú Principal</a>
   </div>
-
-
-
 </body>
 </html>
